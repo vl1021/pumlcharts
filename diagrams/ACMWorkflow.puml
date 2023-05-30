@@ -1,0 +1,24 @@
+@startuml
+:App Enters Foreground;
+if (User Logged In?) then (No)
+  repeat :Begin Login Flow;
+  repeat while (User Logged In?) is (No)
+  detach
+else (Yes)
+  :Set ACM Settings;
+  :Check ACM Settings;
+  if (ACM Error?) then (Yes)
+  :Show Error Connection Screen;
+  kill
+  else (No)
+   if (Suppress Validity?) then (Yes)
+   :Show Glucose Monitoring/Onboarding Screen;
+   kill
+   else (No)
+   if (Valid?) then (No)
+   :Show Non-Dismissable Error Screen;
+   kill
+   else (Yes)
+   :Show Dismissable Error Screen;
+   kill
+@enduml
