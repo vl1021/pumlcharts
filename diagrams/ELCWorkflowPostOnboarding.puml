@@ -1,0 +1,14 @@
+startuml
+if (Entered foreground?) then (yes)
+ while(App Logged in?) is (no)
+    :Login Flow;
+ endwhile
+  :Language Control Workflow;
+ if (Is User COR the United States? and is Device Language in the list of Language Control?) then (yes)
+    :Contunue with App features;
+ else (no)
+    :Show Language Control UI;
+ endif
+endif
+stop
+@enduml
