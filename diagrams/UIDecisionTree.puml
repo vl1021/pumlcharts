@@ -1,0 +1,37 @@
+@startuml
+if (App in Unrecoverable Error State?) then (Yes)
+:Init + Show Unrecoverable Error UI*;
+kill
+else (No)
+if (User Logged In?) then (No)
+:Begin Login Flow;
+kill
+else (Yes)
+if (Valid GCS URLs Obtained?) then (No or Retry)
+'space label only for alignment
+label sp_lab0
+label sp_lab1
+'real label
+label lab
+:Show Server Error/Allow Manual Retry;
+kill
+else (Yes)
+if (Valid Feature Flag (UOM) Obtained?) then (yes)
+label sp_lab2
+goto sp_lab1
+else
+:ACM Flow;
+if (Compatible?) then (No)
+:Non-Dismissable Compatibility Message;
+kill
+else (Yes)
+:Dismissable Compatibility Message;
+if (Onboarding Complete?) then (No)
+:Onboarding Flow;
+kill
+else (Yes)
+:App Main Screen/Access App Features;
+kill
+
+left footer *Full Screen UI that blocks access to any app feature
+@enduml
