@@ -1,0 +1,46 @@
+@startuml
+skin rose
+!pragma useVerticalIf on
+start
+
+if(TxSessionState= \nNever Paired?) then (yes)
+    : Pair New Tx Display State \n with Never Paired as Reason;
+    kill;
+    
+else if(TxSessionState= \nTransmitter Failed?)
+    : Some Reason;
+    kill;
+    
+else if(TxSessionState= \nTxExpired?) then (yes)
+    : Pair New Tx Display State \n with Tx Expired as Reason;
+    kill;  
+    
+else if(TxSessionState= \nPairing?) then (yes) 
+      switch(Pairing Time \nOut Reached?)
+          case(yes)
+            :Transmitter Pairing \n Unsuccessful with \n Tx ID as Metadata;
+            kill;
+          case(no)
+            :Transmitter Pairing \nDisplay State with \n Tx ID as Metadata;
+            kill;
+      endswitch
+      kill;
+      
+else if(Signal Loss?) then (yes)
+     switch (Stop Sensor \n Command Queued)
+         case(no)
+            : No Sensor Session \nDisplay State Due to No\n Session as Reason and \nTx ID as Metadata;
+            kill; 
+         case(yes)
+            switch(User Provided Sensor Code?)
+               case(yes)
+                 :Start Sensor \n Warmup State;
+                 kill;
+               case(no)
+                 : No Sensor Session \nDisplay State Due to No\n Session as Reason and \nTx ID as Metadata;
+                 kill;        
+            endswitch   
+            
+
+end
+@enduml
