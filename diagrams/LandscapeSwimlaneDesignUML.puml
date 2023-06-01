@@ -1,6 +1,6 @@
 @startuml
+skin rose
 |Swimlane1|
-
 :Client;
 if (Injects)
 |Swimlane2|

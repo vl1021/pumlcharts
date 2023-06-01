@@ -11,5 +11,4 @@ if (DB error occured?) then (yes)
 else (no)
   :Do Nothing; 
   kill
-
 @enduml
