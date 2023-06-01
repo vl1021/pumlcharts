@@ -1,4 +1,5 @@
 @startuml
+skin rose
 if (App in Unrecoverable Error State?) then (Yes)
 :Init + Show Unrecoverable Error UI*;
 kill
