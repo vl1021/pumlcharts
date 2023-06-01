@@ -1,6 +1,6 @@
 @startuml
 skin rose
-:App Laucnhed; 
+:App Launched; 
 :Subscribe to\nPersistence Error\nEvent;
 detach
 if (DB error occured?) then (yes)
