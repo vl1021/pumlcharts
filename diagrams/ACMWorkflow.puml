@@ -1,4 +1,5 @@
 @startuml
+skin rose
 :App Enters Foreground;
 if (User Logged In?) then (No)
   repeat :Begin Login Flow;
