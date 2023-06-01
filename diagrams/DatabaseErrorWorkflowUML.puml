@@ -1,0 +1,15 @@
+@startuml
+skin rose
+:App Laucnhed; 
+:Subscribe to\nPersistence Error\nEvent;
+detach
+if (DB error occured?) then (yes)
+    :Publish\nPersistence Error\nvia Persistence\nEvent Publisher ;  
+      :Show Error Screen;
+      kill
+  
+else (no)
+  :Do Nothing; 
+  kill
+
+@enduml

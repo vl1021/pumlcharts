@@ -1,0 +1,20 @@
+@startuml
+|Swimlane1|
+
+:Client;
+if (Injects)
+|Swimlane2|
+:Data Model;
+else
+:Swimlane Theme;
+endif
+:Info;
+:Swimline Presenter;
+:Manages;
+|Swimlane3|
+:Swimlane View;
+|Swimlane24|
+:Invokes;
+:Native Drawing APIs;
+kill
+@enduml
