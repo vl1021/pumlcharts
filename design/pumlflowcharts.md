@@ -2,11 +2,11 @@
 
 # ACM Workflow
 
-![ACM Workflow](../images/ACMWorkflow.png) 
+![ACM Workflow](../images/ACMWorkflow.png){ width=300 margin=auto } ![ACM Workflow](../images/ACMWorkflow-p.png){ width=300 margin=auto }
+
 
 ## [ACMWorkflow.puml](../diagrams/ACMWorkflow.puml)
 
-![ACM Workflow](../images/ACMWorkflow-p.png){ width=500 margin=auto }
 
 ## Source
 
