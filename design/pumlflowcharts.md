@@ -3,10 +3,13 @@
 # ACM Workflow
 
 ![ACM Workflow](../images/ACMWorkflow.png) 
+
+## [ACMWorkflow.puml](../diagrams/ACMWorkflow.puml)
+
 ![ACM Workflow](../images/ACMWorkflow-p.png){ width=500 margin=auto }
 
 ## Source
-[ACMWorkflow.puml](../diagrams/ACMWorkflow.puml)
+
 
 # ELC Workflow Post Onboarding
 
