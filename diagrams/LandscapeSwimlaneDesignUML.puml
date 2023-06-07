@@ -1,19 +1,19 @@
 @startuml
 skin rose
-|Swimlane1|
+| Swimlane1 |
 :Client;
-if (Injects)
+if (Injects) then ( )
 |Swimlane2|
 :Data Model;
-else
+else ( )
 :Swimlane Theme;
-endif
+endif 
 :Info;
 :Swimline Presenter;
 :Manages;
 |Swimlane3|
 :Swimlane View;
-|Swimlane24|
+|Swimlane4|
 :Invokes;
 :Native Drawing APIs;
 kill
