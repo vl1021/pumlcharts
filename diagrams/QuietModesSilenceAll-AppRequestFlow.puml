@@ -1,0 +1,39 @@
+@startuml
+skin rose
+skinparam ConditionEndStyle hline
+!pragma useVerticalIf on
+start
+:var isSilenceAllPermitted{};
+://Input GCS flag//\n//from persistence//\n **maxSilenceAllMinutes**;
+switch ()
+case (Yes)
+label sp_lab2
+  :Silence All Feature \nis Available;
+switch ()
+case ()
+:Show UI;
+kill
+case ()
+:Set Maximum \nDisplayed Level;
+kill
+endswitch
+case (No)
+label sp_lab0
+label sp_lab1
+label lab
+  :Silence All Feature \nis **NOT** Available;
+:Hide UI;
+kill
+case (Nil)
+if (COR US?) then (Yes)
+label sp_lab3
+goto sp_lab1
+else (No)
+switch ()
+case ()
+: Show UI;
+kill
+case ()
+: Set Maximum \nDisplayed Level \nto 6 hrs;
+kill
+@enduml
