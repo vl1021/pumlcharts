@@ -1,4 +1,6 @@
-startuml
+' Submitted by Andreas
+@startuml
+skin rose
 if (Entered foreground?) then (yes)
  while(App Logged in?) is (no)
     :Login Flow;
