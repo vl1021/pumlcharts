@@ -17,10 +17,10 @@ label lab
 :Show Server Error/Allow Manual Retry;
 kill
 else (Yes)
-if (Valid Feature Flag (UOM) Obtained?) then (yes)
+if (Valid Feature Flag (UOM) Obtained?) then (No)
 label sp_lab2
 goto sp_lab1
-else
+else (Yes)
 :ACM Flow;
 if (Compatible?) then (No)
 :Non-Dismissable Compatibility Message;
