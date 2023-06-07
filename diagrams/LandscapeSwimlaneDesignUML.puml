@@ -1,0 +1,20 @@
+@startuml
+skin rose
+| Swimlane1 |
+:Client;
+if (Injects) then ( )
+|Swimlane2|
+:Data Model;
+else ( )
+:Swimlane Theme;
+endif 
+:Info;
+:Swimline Presenter;
+:Manages;
+|Swimlane3|
+:Swimlane View;
+|Swimlane4|
+:Invokes;
+:Native Drawing APIs;
+kill
+@enduml

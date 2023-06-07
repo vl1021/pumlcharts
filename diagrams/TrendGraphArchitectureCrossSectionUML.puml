@@ -1,0 +1,22 @@
+@startuml
+skin rose
+| Swimlane1 |
+:App Layer;
+switch (Injects) 
+case ( )
+    : Swimlane Theme;
+case ( )
+    : Data Models;
+case ( )
+    : Swimlane Config;
+endswitch
+| Swimlane2 |
+:into;
+:Swimlane Presenter;
+:Manages;
+| Swimlane3 |
+:Swimlane View;
+| Swimlane4 |
+:Invokes;
+:Naitivie Drawing APis;
+@enduml
