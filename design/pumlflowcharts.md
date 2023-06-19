@@ -33,7 +33,7 @@
 ![Database Error Workflow](../images/DatabaseErrorWorkflow.png){ width=300 margin=auto } ![Database Error Workflow](../images/dbew-p.png){ width=300 margin=auto }
 
 
-## [DatabaseErrorWorkflow.puml](../diagrams/DatabaseErrorWorkflow.puml)
+## [DatabaseErrorWorkflow.puml](../diagrams/DatabaseErrorWorkflowUML.puml)
 
 
 # Tx Session State Mapping
