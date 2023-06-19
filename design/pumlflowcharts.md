@@ -30,7 +30,7 @@
 # Database Error Workflow
 
 
-![Database Error Workflow](../images/DatabaseErrorWorkflow.png){ width=300 margin=auto } ![Database Error Workflow](../images/dbew-p.png){ width=300 margin=auto }
+![Database Error Workflow](../images/DatabaseErrorWorkflow.png){ width=300 margin=auto } ![Database Error Workflow](../images/DatabaseErrorWorkflowUML.png){ width=300 margin=auto }
 
 
 ## [DatabaseErrorWorkflow.puml](../diagrams/DatabaseErrorWorkflowUML.puml)
