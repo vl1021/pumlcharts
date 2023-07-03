@@ -1,22 +1,23 @@
 @startuml
-skin rose
 | Swimlane1 |
-:App Layer;
-switch (Injects) 
+#Pink:App Layer;
+#LightBlue :Injects;
+| Swimlane2 |
+switch () 
 case ( )
-    : Swimlane Theme;
+    #Pink : Swimlane Theme;
 case ( )
-    : Data Models;
+    #Pink : Data Models;
 case ( )
-    : Swimlane Config;
+    #Pink : Swimlane Config;
 endswitch
 | Swimlane2 |
-:into;
-:Swimlane Presenter;
-:Manages;
+#LightBlue :Into;
+#Pink :Swimlane Presenter;
+#LightBlue :Manages;
 | Swimlane3 |
-:Swimlane View;
+#Pink:Swimlane View;
 | Swimlane4 |
-:Invokes;
-:Naitivie Drawing APis;
+#LightBlue :Invokes;
+#Pink :Naitivie Drawing APIs;
 @enduml

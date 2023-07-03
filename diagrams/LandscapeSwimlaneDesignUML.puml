@@ -1,20 +1,20 @@
 @startuml
-skin rose
-| Swimlane1 |
+| Model |
 :Client;
-if (Injects) then ( )
-|Swimlane2|
-:Data Model;
+#LightBlue :Injects;
+|View Model|
+if () then ( )
+#pink :Data Model;
 else ( )
-:Swimlane Theme;
+#Pink :Swimlane Theme;
 endif 
-:Info;
-:Swimline Presenter;
-:Manages;
-|Swimlane3|
-:Swimlane View;
-|Swimlane4|
-:Invokes;
-:Native Drawing APIs;
+#LightBlue :Info;
+#pink :Swimline Presenter;
+#LightBlue :Manages;
+|Swimlane View|
+#pink :Swimlane View;
+|View|
+#LightBlue :Invokes;
+#pink :Native Drawing APIs;
 kill
 @enduml

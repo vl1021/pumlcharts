@@ -1,0 +1,33 @@
+@startuml
+Title "Alert State Diagram"
+state "Idle Mode" as ID #AquaMarine
+state "Switch to Notification" as EN #APPLICATION
+state "Notification Mode" as NM #AquaMarine
+state "Switch to Acknowledge" as EA #APPLICATION
+state "Acknowledge Mode" AS AM #AquaMarine
+state "Switch to Idle" as EI #APPLICATION
+state "Switch to Notification" as E2 #APPLICATION
+state "Switch to Idle" as I2 #APPLICATION
+
+ID : Alerts Inactive, but their parameters/conditions \ncontinually evaluated.
+EN : **Activation Trigger** invalid; AND \n**Local Settings** = ON; AND \n**Suspended Behaviour** invalid (if applicable)
+NM : * Provide notification to user. \n*Re-alert if applicable as needed.
+EA : User acknowledges alert.
+AM : No action, but parameters/conditions \ncontinually evaluated.
+EI : **Activation Trigger** invalid.
+E2 : **Activation Trigger** invalid AND \n**Acknolwedge Repeat Time** has expired.
+I2 : * **Activation Trigger** invalid AND **Hysteresis** \n**Behaviour** Invalid (if applicable): OR \n* **Physiological Alarm Signal** OR a \n**Physiological Advisory** AND receiving \ndevice stops showing valid EGVs; OR \n* Any of an Alert's following paramenters \nare modified by the user: **Activation** \n**Trigger Threshold, For More Than** \n**Setting, Acknowledge Repeat Value**, OR \n**Local On/Off**.
+
+[*] --> ID : Initialize
+ID --> EN
+EN -down-> NM
+NM --> EA
+EA --> AM
+ID <-- EI
+EI <-- NM
+NM <-right- E2
+E2 <-- AM
+ID <-- I2
+AM -right-> I2
+
+@enduml
